@@ -1,3 +1,373 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+body {
+	width: 880px;
+	margin: 0 auto;
+}
+
+header {
+	width: 880px;
+}
+
+nav {
+	display: flex;
+	width: 600px;
+	margin-top: 40px;
+	vertical-align: top;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+header a {
+	/* width: 16.2%; */
+	color: lightgray;
+	text-decoration: none;
+}
+
+img {
+
+}
+
+h2 {
+	font-size: 150%;
+}
+
+h3 {
+	text-align: left;
+}
+
+p {
+	text-align: left;
+}
+
+h6 {
+	text-align: center;
+	font-size: 90%;
+	margin-top: 60px;
+}
+
+.top-bar {
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo {
+	margin: 30px 0;
+}
+
+.home h1 {
+	display: flex;
+	font-size: 75px;
+	text-align: center;
+	margin-right: 30px;
+	flex-direction: column;
+	align-self: center;
+}
+
+.home button {
+	background-color: white;
+	border: 1px solid black;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 25%;
+	margin: 20px 70px -20px 70px;
+}
+
+.home .below-bar {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.home .header-img {
+	margin: 30px 0 30px 60px;
+}
+
+.home .border {
+  border: 1px solid black;
+  margin: 40px 0;
+}
+
+.home .top-content {
+	display: flex;
+	width: 900px;
+}
+
+.home .top-content div {
+	border-right: 20px solid transparent;
+}
+
+.home .middle-img {
+	margin: 30px 0;
+}
+
+.home .bot-content {
+	display: flex;
+	width: 900px;
+	justify-content: space-between;
+}
+
+.home .bot-content div {
+	border-right: 20px solid transparent;
+}
+
+.home footer {
+	text-align: center;
+	line-height: 1.1;
+}
+
+.home address {
+	text-align: left;
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 750px;
+    margin: auto 3%;
+  }
+
+  header {
+    width: 750px;
+  }
+
+  .top-bar {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  nav {
+    display: flex;
+    width: 750px;
+    margin-top: 40px;
+    vertical-align: top;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .home .header-img {
+    display: none;
+  }
+
+  .home .below-bar {
+    display: flex;
+    width: 750px;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+  }
+
+  .home .header-img {
+  	margin: 0;
+  }
+
+  .logo {
+    text-align: center;
+    width: 750px;
+    margin-bottom: 0;
+  }
+
+  .home .border {
+    width: 750px;
+    border: 1px solid black;
+    margin: 40px 0;
+  }
+
+  .home .top-content {
+  	display: flex;
+  	width: 750px;
+    justify-content: space-around;
+    /* margin: inherit 2%; */
+  }
+
+  .home .top-content div {
+  	border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+
+  .home .middle-img {
+    width: 750px;
+  }
+
+  .home .bot-content {
+    display: flex;
+    width: 750px;
+    justify-content: space-around;
+    /* margin: inherit 2%; */
+  }
+
+  .home .bot-content div {
+    border-left: 15px solid transparent;
+    border-right: 20px solid transparent;
+  }
+
+  .home footer{
+    border-left: 15px solid transparent;
+    border-right: 20px solid transparent;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    width: 500px;
+    margin: 0;
+  }
+
+  header {
+    width: 480px;
+    /* margin: auto; */
+  }
+
+  .home h1 {
+    margin-left: 40px;
+  }
+
+  .top-bar {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  nav {
+    display: flex;
+    width: 500px;
+    margin-top: 0px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  nav a {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .home .header-img {
+    display: none;
+  }
+
+  .home .below-bar {
+    display: flex;
+    width: 480px;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+  }
+
+  .home .header-img {
+  	margin: 0;
+  }
+
+  .logo {
+    text-align: center;
+    vertical-align: top;
+    width: 500px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .home .border {
+    width: 460px;
+    border: 1px solid black;
+    margin: 40px 10px;
+  }
+
+  .home .top-content {
+  	display: flex;
+  	width: 480px;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .home .top-content div {
+    margin-bottom: 40px;
+  }
+
+  .home .middle-img {
+    width: 480px;
+    margin: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .home .bot-content {
+    display: flex;
+    width: 480px;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .home .bot-content div {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    margin-bottom: 40px;
+  }
+
+  .home footer{
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+}
